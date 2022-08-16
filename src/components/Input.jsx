@@ -4,7 +4,7 @@ export default function Input() {
   return (
     <div className='input-area'>
       <div className='input-box'>
-        <h2>Add a new note</h2>
+        <h2>You Can Do It !</h2>
         <textarea
           name='message'
           rows='2'

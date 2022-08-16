@@ -9,6 +9,7 @@ export default function App() {
     <>
       <Heading />
       <Input />
+      <Note />
       <Footer />
     </>
   );
