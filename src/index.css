@@ -1,27 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
 * {
   padding: 0;
   margin: 0;
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
   position: relative;
 }
 body {
-  background: #eee;
+  background: #e9dac1;
 }
 
 header {
-  background-color: #f5ba13;
+  background-color: #f7ecde;
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-  color: #fff;
-  font-family: 'McLaren', cursive;
-  font-weight: 200;
+  color: rgb(40, 43, 42);
+  font-weight: 900;
 }
 
 /* Input  */
@@ -31,7 +32,7 @@ header h1 {
   justify-content: center;
 }
 .input-box {
-  background: whitesmoke;
+  background: #ffe9ae;
   padding: 7%;
   border-radius: 4px;
   border: 3px solid;
@@ -95,6 +96,7 @@ textarea {
   border: none;
   font-size: 1rem;
   resize: none;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 textarea:focus {
@@ -210,5 +212,5 @@ footer {
 }
 
 footer p {
-  color: #ccc;
+  color: #54bab9;
 }

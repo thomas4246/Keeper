@@ -1,10 +1,15 @@
 import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Input() {
   return (
     <div className='input-area'>
       <div className='input-box'>
-        <h2>You Can Do It !</h2>
+        <TypeAnimation
+          sequence={['Add a New Note ...', 1000, 'You Can Do It  ! !', 2000]}
+          wrapper='h2'
+          cursor={true}
+        />
         <textarea
           name='message'
           rows='2'
