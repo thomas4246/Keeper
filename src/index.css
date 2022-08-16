@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  background: #eee;
+}
+
+header {
+  background-color: #f5ba13;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: 'McLaren', cursive;
+  font-weight: 200;
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Input  */
+.input-area {
+  margin: 5% 5%;
+  display: grid;
+  justify-content: center;
+}
+.input-box {
+  background: whitesmoke;
+  padding: 7%;
+  border-radius: 4px;
+  border: 3px solid;
+  box-shadow: 0.5rem 0.5rem 0;
+  text-align: center;
+}
+
+.input-box h2 {
+  margin: 3% 0;
+}
+
+.add-btn {
+  margin-top: 5%;
+  align-items: center;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  transition: box-shadow 0.15s, transform 0.15s;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.add-btn:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.add-btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.add-btn:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+}
+
+/* test */
+input,
+span,
+label,
+textarea {
+  display: inline;
+  padding: 5%;
+  border: none;
+  font-size: 1rem;
+}
+
+textarea:focus {
+  outline: 0;
+}
+/* Question */
+
+textarea.question {
+  font-size: 2rem;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+/* Underline and Placeholder */
+
+textarea.question + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid red;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+textarea.question:focus + label {
+  width: 80%;
+}
+
+textarea.question:valid,
+textarea.question:focus {
+  margin-top: 5%;
+}
+
+textarea.question:focus + label > span,
+textarea.question:valid + label > span {
+  top: -135px;
+  font-size: 1rem;
+  color: #333;
+}
+
+textarea.question:valid + label {
+  border-color: green;
+}
+
+textarea.question:invalid {
+  box-shadow: none;
+}
+
+textarea.question + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8f8f8f;
+  font-size: 2rem;
+  top: -66px;
+  left: 0px;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
