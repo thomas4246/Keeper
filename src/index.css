@@ -208,6 +208,12 @@ textarea.question + label > span {
   height: 30px;
 }
 
+#check:hover,
+#trash:hover {
+  transform: scale(1.3);
+  transition: 0.5s ease-in-out;
+}
+
 /* Footer */
 
 footer {
@@ -228,6 +234,22 @@ footer p {
   text-decoration: line-through;
 }
 
-.card-decoration {
-  opacity: 70%;
+.delete-animation {
+  animation: fallAway forwards 1s ease-out 1;
+}
+
+@keyframes fallAway {
+  0% {
+    transform: rotateZ(0deg);
+    top: 0;
+    opacity: 1;
+  }
+  25% {
+    transform: rotateZ(-15deg);
+  }
+  100% {
+    top: 300px;
+    transform: rotateZ(-5deg);
+    opacity: 0;
+  }
 }

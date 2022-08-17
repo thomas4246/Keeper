@@ -1,23 +1,40 @@
 import React, { useState } from 'react';
 
-export default function Card({ text, note, notes, setNotes }) {
+export default function Card({ text, note, notes, setNotes, key }) {
   const [isComplete, setComplete] = useState(false);
+
+  const deleteAnimation = () => {
+    let note = document.getElementById('note');
+    note.classList.add('delete-animation');
+  };
 
   const handelComplete = () => {
     setComplete(!isComplete);
   };
 
   const handelDelete = () => {
-    setNotes(notes.filter((item) => item.id !== note.id));
+    setTimeout(() => {
+      setNotes(notes.filter((item) => item.id !== note.id));
+    }, 1000);
   };
+
   return (
     <>
-      <div className={isComplete ? 'card-decoration' : null}>
-        <div className='note'>
-          <p className={isComplete ? 'text-decoration' : null}>{text}</p>
+      <div>
+        <div className='note' id='note'>
+          <p
+            contentEditable={true}
+            className={isComplete ? 'text-decoration' : null}
+          >
+            {text}
+          </p>
           <div className='note-btn'>
-            <button onClick={handelComplete}>✅</button>
-            <button onClick={handelDelete}>🗑</button>
+            <button onClick={handelComplete} id='check'>
+              ✏️
+            </button>
+            <button onClick={handelDelete} id='trash'>
+              🗑
+            </button>
           </div>
         </div>
       </div>

@@ -8,10 +8,14 @@ export default function Input({ text, setText, notes, setNotes }) {
   };
 
   const handelClick = (e) => {
+    if (!text || /^\s*$/.test(text)) {
+      return;
+    }
+
     e.preventDefault();
     setNotes([
       ...notes,
-      { text: text, completed: false, id: Math.floor(Math.random() * 1000) },
+      { text: text, completed: false, id: Math.floor(Math.random() * 10000) },
     ]);
     setText('');
   };
