@@ -8,7 +8,7 @@ export default function Input({ text, setText, notes, setNotes }) {
   };
 
   const handelClick = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     setNotes([
       ...notes,
       { text: text, completed: false, id: Math.floor(Math.random() * 1000) },

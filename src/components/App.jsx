@@ -11,7 +11,7 @@ export default function App() {
     <>
       <Heading />
       <Input text={text} setText={setText} setNotes={setNotes} notes={notes} />
-      <Note notes={notes} />
+      <Note notes={notes} setNotes={setNotes} />
       <Footer />
     </>
   );

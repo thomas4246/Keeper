@@ -221,3 +221,13 @@ footer {
 footer p {
   color: #876445;
 }
+
+/* card decorations */
+
+.text-decoration {
+  text-decoration: line-through;
+}
+
+.card-decoration {
+  opacity: 70%;
+}
