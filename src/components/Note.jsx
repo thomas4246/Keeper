@@ -1,19 +1,12 @@
 import React from 'react';
+import Card from './Card';
 
-export default function Note({ content }) {
+export default function Note({ notes }) {
   return (
-    <div className='note'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col'>
-            <p>Buy Milk</p>
-            <div className='note-btn'>
-              <button>✅</button>
-              <button>🗑</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>
+      {notes.map((note) => (
+        <Card text={note.text} />
+      ))}
     </div>
   );
 }
