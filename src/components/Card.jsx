@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 export default function Card({ text, note, notes, setNotes, key }) {
   const [isComplete, setComplete] = useState(false);
@@ -13,14 +14,12 @@ export default function Card({ text, note, notes, setNotes, key }) {
   };
 
   const handelDelete = () => {
-    setTimeout(() => {
-      setNotes(notes.filter((item) => item.id !== note.id));
-    }, 1000);
+    setNotes(notes.filter((item) => item.id !== note.id));
   };
 
   return (
     <>
-      <div>
+      <TransitionGroup component='ul'>
         <div className='note' id='note'>
           <p
             contentEditable={true}
@@ -37,7 +36,7 @@ export default function Card({ text, note, notes, setNotes, key }) {
             </button>
           </div>
         </div>
-      </div>
+      </TransitionGroup>
     </>
   );
 }

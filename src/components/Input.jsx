@@ -44,7 +44,7 @@ export default function Input({ text, setText, notes, setNotes }) {
         </label>
         <div>
           <button className='add-btn' onClick={handelClick}>
-            ✍🏻
+            <p>✍🏻</p>
           </button>
         </div>
       </form>
