@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { DarkModeToggle } from 'react-dark-mode-toggle-2';
 
 export default function Heading() {
@@ -6,15 +7,24 @@ export default function Heading() {
 
   const bodyClass = document.body.classList;
 
-  const handelToggle = () => {
-    if (isDarkMode) {
-      bodyClass.add('dark-theme');
-    } else {
-      bodyClass.remove('dark-theme');
+  useEffect(() => {
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      setIsDarkMode(true);
     }
-  };
+  }, []);
 
-  handelToggle();
+  useEffect(() => {
+    const handelToggle = () => {
+      if (isDarkMode) {
+        bodyClass.add('dark-theme');
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        bodyClass.remove('dark-theme');
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+    };
+    handelToggle();
+  }, [isDarkMode]);
 
   return (
     <header>
