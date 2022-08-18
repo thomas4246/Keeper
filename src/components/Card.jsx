@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Card({ text, note, notes, setNotes, noteColor }) {
+export default function Card({ text, note, notes, setNotes }) {
   const [isComplete, setComplete] = useState(false);
 
   const handelComplete = () => {
@@ -11,9 +11,12 @@ export default function Card({ text, note, notes, setNotes, noteColor }) {
     setNotes(notes.filter((item) => item.id !== note.id));
   };
 
+  const time = new Date().toLocaleString();
+
   return (
     <>
       <div className='note' id='note'>
+        <p>{time}</p>
         <p
           contentEditable={true}
           className={isComplete ? 'text-decoration' : null}

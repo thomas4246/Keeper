@@ -48,11 +48,11 @@ export default function Input({
           repeat={1}
           style={{ color: '#2C3639' }}
         />
-        <div className='color-btn'>
+        {/* <div className='color-btn'>
           <span onClick={handelColor}>💛</span>
           <span onClick={handelColor}>💙</span>
           <span onClick={handelColor}>💚</span>
-        </div>
+        </div> */}
         <textarea
           name='message'
           rows='2'

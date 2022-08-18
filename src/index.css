@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
+/* Theme */
+:root {
+  --primany-color: #f7ecde;
+  --secondary-color: #e9dac1;
+  --text-color: #2c3639;
+  --note: #ffe9ae;
+}
+
+.dark-theme {
+  --primany-color: #2c3333;
+  --secondary-color: #3f4e4f;
+  --text-color: #dcd7c9;
+  --note: #556e53;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,20 +25,27 @@ html {
   position: relative;
 }
 body {
-  background: #e9dac1;
+  background: var(--secondary-color);
   height: 95vh;
+  transition: 0.5s ease-in;
 }
 
 header {
-  background-color: #f7ecde;
+  background-color: var(--primany-color);
   margin: 0 !important;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.5s ease-in;
 }
 
 header h1 {
-  color: #2c3639;
+  color: var(--text-color);
   font-weight: 900;
+  display: inline;
+}
+
+.theme-toggle {
+  float: right;
 }
 
 /* Input  */
@@ -34,6 +56,7 @@ header h1 {
 }
 .input-box {
   transition: 0.3s ease-in-out;
+  background-color: var(--note) !important;
   padding: 7%;
   border-radius: 4px;
   border: 2px solid;
@@ -153,7 +176,7 @@ textarea.question + label {
   padding: 0;
   margin: 0;
   width: 10%;
-  border-top: 1px solid red;
+  border-top: 1px solid #e47676;
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
   height: 0px;
@@ -172,11 +195,11 @@ textarea.question:focus + label > span,
 textarea.question:valid + label > span {
   top: -150px;
   font-size: 1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 textarea.question:valid + label {
-  border-color: green;
+  border-color: #ffd700;
 }
 
 textarea.question:invalid {
@@ -306,7 +329,7 @@ footer {
 }
 
 footer p {
-  color: #876445;
+  color: var(--text-color);
 }
 
 /* card decorations */
