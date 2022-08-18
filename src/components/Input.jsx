@@ -21,10 +21,8 @@ export default function Input({
 
     e.preventDefault();
 
-    setNotes([
-      ...notes,
-      { text: text, completed: false, id: Math.floor(Math.random() * 10000) },
-    ]);
+    setNotes([...notes, { text: text, id: Math.floor(Math.random() * 10000) }]);
+
     setText('');
   };
 
@@ -48,11 +46,13 @@ export default function Input({
           repeat={1}
           style={{ color: '#2C3639' }}
         />
+
         {/* <div className='color-btn'>
           <span onClick={handelColor}>💛</span>
           <span onClick={handelColor}>💙</span>
           <span onClick={handelColor}>💚</span>
         </div> */}
+
         <textarea
           name='message'
           rows='2'
