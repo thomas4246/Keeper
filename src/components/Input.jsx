@@ -1,7 +1,14 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
-export default function Input({ text, setText, notes, setNotes }) {
+export default function Input({
+  text,
+  setText,
+  notes,
+  setNotes,
+  noteColor,
+  setNoteColor,
+}) {
   const handelChange = (e) => {
     let newText = e.target.value;
     setText(newText);
@@ -13,6 +20,7 @@ export default function Input({ text, setText, notes, setNotes }) {
     }
 
     e.preventDefault();
+
     setNotes([
       ...notes,
       { text: text, completed: false, id: Math.floor(Math.random() * 10000) },
@@ -20,15 +28,31 @@ export default function Input({ text, setText, notes, setNotes }) {
     setText('');
   };
 
+  const handelColor = (e) => {
+    if (e.target.innerHTML === '💛') {
+      setNoteColor('#ffe9ae');
+    } else if (e.target.innerHTML === '💙') {
+      setNoteColor('#B2C8DF');
+    } else if (e.target.innerHTML === '💚') {
+      setNoteColor('#CED89E');
+    }
+  };
+
   return (
     <div className='input-area'>
-      <form className='input-box'>
+      <form className='input-box' style={{ backgroundColor: noteColor }}>
         <TypeAnimation
           sequence={['Add a New Note ...', 1000, 'You Can Do It  ! !', 2000]}
           wrapper='h2'
           cursor={true}
           repeat={1}
+          style={{ color: '#2C3639' }}
         />
+        <div className='color-btn'>
+          <span onClick={handelColor}>💛</span>
+          <span onClick={handelColor}>💙</span>
+          <span onClick={handelColor}>💚</span>
+        </div>
         <textarea
           name='message'
           rows='2'
@@ -44,7 +68,7 @@ export default function Input({ text, setText, notes, setNotes }) {
         </label>
         <div>
           <button className='add-btn' onClick={handelClick}>
-            <p>✍🏻</p>
+            <span>✍🏻</span>
           </button>
         </div>
       </form>
