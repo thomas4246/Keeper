@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-export default function Note({ notes, setNotes, noteColor }) {
+export default function Note({ notes, setNotes, noteColor, time }) {
   return (
     <div className='note-box'>
       <TransitionGroup className='note-container'>
@@ -13,6 +13,7 @@ export default function Note({ notes, setNotes, noteColor }) {
             classNames='delete-animation'
           >
             <Card
+              time={note.time}
               note={note}
               text={note.text}
               key={note.id}

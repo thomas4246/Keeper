@@ -226,8 +226,7 @@ textarea.question + label > span {
 /* Note */
 
 .note-box {
-  /* position: absolute; */
-  margin: 5%;
+  margin: 6%;
 }
 
 .note {

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default function Card({ text, note, notes, setNotes }) {
+export default function Card({ text, note, notes, setNotes, time }) {
   const [isComplete, setComplete] = useState(false);
 
   //// Text Line Through Decoration ////
@@ -12,12 +12,10 @@ export default function Card({ text, note, notes, setNotes }) {
     setNotes(notes.filter((item) => item.id !== note.id));
   };
 
-  const time = new Date().toLocaleString();
-
   return (
     <>
       <div className='note' id='note'>
-        <p>{time}</p>
+        <p style={{ fontSize: '.7rem', color: 'gray' }}>{time}</p>
         <p
           suppressContentEditableWarning={true}
           contentEditable

@@ -21,8 +21,11 @@ export default function Input({
     }
 
     e.preventDefault();
-
-    setNotes([...notes, { text: text, id: Math.floor(Math.random() * 10000) }]);
+    const time = new Date().toLocaleString();
+    setNotes([
+      ...notes,
+      { time: time, text: text, id: Math.floor(Math.random() * 10000) },
+    ]);
     setText('');
   };
 
