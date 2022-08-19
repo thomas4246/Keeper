@@ -14,6 +14,7 @@ export default function Input({
     setText(newText);
   };
 
+  //// Render Input text ////
   const handelClick = (e) => {
     if (!text || /^\s*$/.test(text)) {
       return;
@@ -22,10 +23,10 @@ export default function Input({
     e.preventDefault();
 
     setNotes([...notes, { text: text, id: Math.floor(Math.random() * 10000) }]);
-
     setText('');
   };
 
+  //// Note BackGround Color Picker ////
   const handelColor = (e) => {
     if (e.target.innerHTML === '💛') {
       setNoteColor('#ffe9ae');
@@ -44,7 +45,7 @@ export default function Input({
           wrapper='h2'
           cursor={true}
           repeat={1}
-          style={{ color: '#2C3639' }}
+          style={{ color: ' var(--text-color)' }}
         />
 
         {/* <div className='color-btn'>

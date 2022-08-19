@@ -7,11 +7,15 @@ export default function Heading() {
 
   const bodyClass = document.body.classList;
 
+  //// Theme ////
+
   useEffect(() => {
     if (localStorage.getItem('dark-mode') === 'enabled') {
       setIsDarkMode(true);
     }
   }, []);
+
+  //// Local Storage Theme ////
 
   useEffect(() => {
     const handelToggle = () => {

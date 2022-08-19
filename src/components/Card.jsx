@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 export default function Card({ text, note, notes, setNotes }) {
   const [isComplete, setComplete] = useState(false);
 
+  //// Text Line Through Decoration ////
   const handelComplete = () => {
     setComplete(!isComplete);
   };
-
+  //// Filter & Delete Notes ////
   const handelDelete = () => {
     setNotes(notes.filter((item) => item.id !== note.id));
   };

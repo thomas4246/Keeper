@@ -236,9 +236,8 @@ textarea.question + label > span {
   float: left;
   text-align: center;
   transition: 0.3s ease;
-  width: 13rem;
-  height: 7rem;
-  margin: 3%;
+  width: 10rem;
+  margin: 2rem;
   background: #d3cedf;
   color: black;
   border-radius: 10px;
@@ -363,7 +362,7 @@ footer p {
 /* mobile responsive */
 
 @media screen and (max-width: 480px) {
-  .note-box {
+  .note-container {
     display: grid;
     justify-content: center;
   }

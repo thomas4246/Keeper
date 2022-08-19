@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 export default function Note({ notes, setNotes, noteColor }) {
   return (
     <div className='note-box'>
-      <TransitionGroup>
+      <TransitionGroup className='note-container'>
         {notes.map((note) => (
           <CSSTransition
             key={note.id}
