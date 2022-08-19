@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-export default function Note({ notes, setNotes, noteColor, time }) {
+export default function Note({ notes, setNotes, noteColor }) {
   return (
     <div className='note-box'>
       <TransitionGroup className='note-container'>

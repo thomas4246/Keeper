@@ -21,7 +21,10 @@ export default function Input({
     }
 
     e.preventDefault();
+
+    //// Time when note is created ////
     const time = new Date().toLocaleString();
+
     setNotes([
       ...notes,
       { time: time, text: text, id: Math.floor(Math.random() * 10000) },

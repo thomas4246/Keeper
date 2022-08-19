@@ -7,7 +7,6 @@ import Input from './Input';
 export default function App() {
   const [text, setText] = useState('');
   const [notes, setNotes] = useState([]);
-
   const [noteColor, setNoteColor] = useState('var(--note)');
 
   //// Local Storage ////

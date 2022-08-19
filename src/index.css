@@ -6,6 +6,7 @@
   --secondary-color: #e9dac1;
   --text-color: #2c3639;
   --note: #ffe9ae;
+  --card: ;
 }
 
 .dark-theme {
@@ -13,6 +14,7 @@
   --secondary-color: #3f4e4f;
   --text-color: #dcd7c9;
   --note: #b0a565;
+  --card: ;
 }
 
 * {
@@ -199,7 +201,7 @@ textarea.question:valid + label > span {
 }
 
 textarea.question:valid + label {
-  border-color: #ffd700;
+  border-color: #78e6ab;
 }
 
 textarea.question:invalid {
@@ -230,7 +232,7 @@ textarea.question + label > span {
 }
 
 .note {
-  border: 2px solid;
+  border: 1.3px solid;
   padding: 10px;
   float: left;
   text-align: center;
@@ -241,7 +243,7 @@ textarea.question + label > span {
   color: black;
   border-radius: 10px;
   position: relative;
-  box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 .note:hover {
@@ -286,8 +288,13 @@ textarea.question + label > span {
   box-shadow: 0 0 0rem -0.25rem black;
 }
 
+.note-btn span:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
+}
+
 .note-btn button:hover {
-  background: #2c3639;
+  /* background: #2c3639; */
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 }
 .note-btn button:first-child:nth-last-child(1) {
@@ -320,6 +327,7 @@ textarea.question + label > span {
 /* Footer */
 
 footer {
+  z-index: -5;
   text-align: center;
   position: absolute;
   bottom: -5%;

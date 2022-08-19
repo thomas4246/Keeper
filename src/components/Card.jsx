@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function Card({ text, note, notes, setNotes, time }) {
   const [isComplete, setComplete] = useState(false);
@@ -25,10 +25,10 @@ export default function Card({ text, note, notes, setNotes, time }) {
         </p>
         <div className='note-btn'>
           <button onClick={handelComplete} id='check'>
-            ✏️
+            <span> ✏️</span>
           </button>
           <button onClick={handelDelete} id='trash'>
-            🗑
+            <span>🗑</span>
           </button>
         </div>
       </div>
