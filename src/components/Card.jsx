@@ -18,7 +18,8 @@ export default function Card({ text, note, notes, setNotes }) {
       <div className='note' id='note'>
         <p>{time}</p>
         <p
-          contentEditable={true}
+          suppressContentEditableWarning={true}
+          contentEditable
           className={isComplete ? 'text-decoration' : null}
         >
           {text}

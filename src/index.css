@@ -26,8 +26,8 @@ html {
 }
 body {
   background: var(--secondary-color);
-  height: 95vh;
   transition: 0.5s ease-in;
+  padding-bottom: 2.5rem;
 }
 
 header {
@@ -226,7 +226,8 @@ textarea.question + label > span {
 /* Note */
 
 .note-box {
-  position: relative;
+  /* position: absolute; */
+  margin: 5%;
 }
 
 .note {
@@ -235,9 +236,9 @@ textarea.question + label > span {
   float: left;
   text-align: center;
   transition: 0.3s ease;
-  width: 220px;
-  height: 100px;
-  margin: 6%;
+  width: 13rem;
+  height: 7rem;
+  margin: 3%;
   background: #d3cedf;
   color: black;
   border-radius: 10px;
@@ -247,7 +248,7 @@ textarea.question + label > span {
 
 .note:hover {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .note p {
@@ -321,14 +322,15 @@ textarea.question + label > span {
 /* Footer */
 
 footer {
-  position: absolute;
-  bottom: -10%;
-  width: 100%;
-  height: 3rem;
   text-align: center;
+  position: absolute;
+  bottom: -5%;
+  width: 100%;
+  height: 2.5rem;
 }
 
 footer p {
+  font-size: 0.9rem;
   color: var(--text-color);
 }
 
@@ -364,8 +366,5 @@ footer p {
   .note-box {
     display: grid;
     justify-content: center;
-  }
-  footer {
-    bottom: 0;
   }
 }
