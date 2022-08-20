@@ -6,7 +6,11 @@
   --secondary-color: #e9dac1;
   --text-color: #2c3639;
   --note: #ffe9ae;
-  --card: ;
+  --card: linear-gradient(
+    20deg,
+    rgba(231, 246, 242, 1) 0%,
+    rgba(187, 237, 221, 1) 100%
+  );
 }
 
 .dark-theme {
@@ -14,7 +18,11 @@
   --secondary-color: #3f4e4f;
   --text-color: #dcd7c9;
   --note: #b0a565;
-  --card: ;
+  --card: linear-gradient(
+    20deg,
+    rgba(207, 236, 228, 1) 0%,
+    rgba(208, 195, 240, 1) 100%
+  );
 }
 
 * {
@@ -232,32 +240,29 @@ textarea.question + label > span {
 }
 
 .note {
-  border: 1.3px solid;
+  border: 2px outset #3f4e4f;
   padding: 10px;
   float: left;
   text-align: center;
   transition: 0.3s ease;
   width: 10rem;
   margin: 2rem;
-  background: #d3cedf;
-  color: black;
+  background: var(--card);
+  color: #2c3639;
   border-radius: 10px;
   position: relative;
-  box-shadow: 0 0 1rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 .note:hover {
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
   transform: scale(1.02);
 }
 
 .note p {
-  font-size: 1.1em;
-  font-weight: 700;
+  font-size: 1em;
+  font-weight: 600;
   padding: 3%;
   margin: 5% 0 3%;
-  white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
 .note-btn {
@@ -269,7 +274,7 @@ textarea.question + label > span {
   width: 0rem;
   height: 0rem;
   transform: translate(-50%, -50%);
-  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+  transition: 0.4s cubic-bezier(0.25, 0, 0, 1);
 }
 
 .note-btn button {
@@ -280,8 +285,7 @@ textarea.question + label > span {
   height: 2.3rem;
   border: none;
   border-radius: 100%;
-  background: white;
-  color: black;
+  background: whitesmoke;
   transform: translate(-50%, -50%);
   cursor: pointer;
   transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
@@ -294,9 +298,14 @@ textarea.question + label > span {
 }
 
 .note-btn button:hover {
-  /* background: #2c3639; */
+  background: var(--note);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 }
+
+.note-btn button:focus {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+}
+
 .note-btn button:first-child:nth-last-child(1) {
   left: 25%;
   top: 25%;
