@@ -91,21 +91,14 @@ header h1 {
   border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  box-sizing: border-box;
   color: #36395a;
   cursor: pointer;
   display: inline-flex;
   height: 40px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
   overflow: hidden;
   padding: 20px;
   position: relative;
   transition: box-shadow 0.15s, transform 0.15s;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
   font-size: 1rem;
   font-weight: 900;
 }
@@ -170,14 +163,11 @@ textarea.question {
   font-size: 2rem;
   font-weight: 300;
   border-radius: 2px;
-  margin: 0;
-  border: none;
   width: 100%;
   background: rgba(0, 0, 0, 0);
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
-  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+  overflow-x: hidden;
 }
-/* Underline and Placeholder */
 
 textarea.question + label {
   display: block;
@@ -189,7 +179,6 @@ textarea.question + label {
   border-top: 1px solid #e47676;
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
-  height: 0px;
 }
 
 textarea.question:focus + label {
@@ -226,13 +215,6 @@ textarea.question + label > span {
   left: 0px;
   transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
 }
-
-@keyframes appear {
-  100% {
-    opacity: 1;
-  }
-}
-
 /* Note */
 
 .note-box {
